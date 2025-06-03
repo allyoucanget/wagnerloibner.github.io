@@ -1,0 +1,214 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #fff;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  height: 100%;
+  display: block;
+}
+
+a,
+a:link,
+a:active,
+a:visited {
+  color: #335;
+  text-decoration: none;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.6em;
+  z-index: 1000;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 1.6em;
+  padding-top: 0.5em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  z-index: 1000;
+}
+
+.footer {
+  font-size: 0.9em;
+}
+
+.footer-copy {
+  display: inline;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.footer-right {
+  display: inline;
+  text-align: right;
+  position: fixed;
+  right: 0;
+}
+
+.headernav {
+  margin: 0;
+  padding: 0.5em 0 0 0;
+  line-height: 1.2em;
+  background-color: #fff;
+  /*border-bottom: 1px solid #CCC;*/
+}
+
+.headernav ul,
+.nav ul {
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.headernav .nav li {
+  display: inline;
+}
+
+.navlink {
+  padding: 0.5em 0.6em;
+  border: 1px solid #fff;
+}
+
+.navlink a {
+  color: #333355;
+  text-decoration: none;
+}
+
+.navlink:hover {
+  border-color: #ccc;
+}
+
+#pageheader {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 0;
+}
+
+.pageheader {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1em;
+}
+
+.pageheader .icon {
+  font-size: 84px;
+  letter-spacing: 0.1em;
+  margin-bottom: 0;
+  padding-top: 0;
+}
+
+.pageheader h1 {
+  font-size: 2.6em;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.2em;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.pageheader h4 {
+  font-stretch: ultra-expanded;
+  letter-spacing: 0.6em;
+  font-size: 1.4em;
+  margin-top: 0;
+  padding-top: 0.5em;
+  border-top: 2px solid #333;
+}
+
+.headercontent {
+  padding: 2em 0;
+  text-transform: none;
+}
+
+.pagecontent {
+  max-width: 960px;
+  min-width: 32%;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.pagecontent h2 {
+  text-align: center;
+  font-weight: normal;
+  font-variant-caps: small-caps;
+  letter-spacing: 0.2em;
+}
+
+#agency {
+  margin: inherit;
+}
+
+.activity-list {
+  padding: 0 10%;
+  max-width: 600px;
+  margin: 0 auto;
+  list-style: none;
+  letter-spacing: 0.1em;
+  font-variant-caps: petite-caps;
+}
+
+.activity-list li {
+  padding: 0.2em;
+  margin: 0.5em;
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.pagecontent h2,
+.pagecontent ul {
+  line-height: 1.8em;
+}
+
+.fullscreen-section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  scroll-margin-top: 1.6em; /* Accounts for fixed header */
+}
+
+.section-content {
+  max-width: 960px;
+  width: 90%;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Responsive iframe */
+.iframe-container {
+  position: relative;
+  width: 100%;
+  max-width: 960px;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-height: 700px) {
+  .activity-list li {
+    padding: 0.1em;
+    margin: 0.3em;
+  }
+}
