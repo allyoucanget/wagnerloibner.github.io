@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,8 +9,8 @@ body {
   color: #333;
   background-color: #fff;
   font-family: Georgia, "Times New Roman", Times, serif;
-  height: 100%;
-  display: block;
+  min-height: 100vh;
+  box-sizing: border-box;
 }
 
 a,
@@ -25,23 +26,30 @@ a:visited {
   top: 0;
   left: 0;
   width: 100%;
-  height: 1.6em;
+  height: 2.5em;
   z-index: 1000;
+  background: #fff;
+  border-bottom: 1px solid #eee;
 }
 
 #footer {
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 1.6em;
-  padding-top: 0.5em;
-  padding-left: 0.5em;
-  padding-right: 0.5em;
+  width: 100%;
+  height: 2.5em;
+  padding: 0.5em 0.5em 0 0.5em;
   z-index: 1000;
+  background: #fff;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer {
   font-size: 0.9em;
+  width: 100%;
 }
 
 .footer-copy {
@@ -53,8 +61,6 @@ a:visited {
 .footer-right {
   display: inline;
   text-align: right;
-  position: fixed;
-  right: 0;
 }
 
 .headernav {
@@ -171,14 +177,17 @@ a:visited {
 }
 
 .fullscreen-section {
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
   overflow: hidden;
-  scroll-margin-top: 1.6em; /* Accounts for fixed header */
+  scroll-margin-top: 2.5em; /* Accounts for fixed header */
+  padding-top: 2.5em; /* Space for header */
+  padding-bottom: 2.5em; /* Space for footer */
+  box-sizing: border-box;
 }
 
 .section-content {
@@ -206,9 +215,50 @@ a:visited {
   height: 100%;
 }
 
-@media (max-height: 700px) {
-  .activity-list li {
-    padding: 0.1em;
-    margin: 0.3em;
+@media (max-width: 700px) {
+  #header,
+  #footer {
+    height: 3.2em;
+    font-size: 1.1em;
+    padding: 0.7em 0.5em;
+  }
+  .fullscreen-section {
+    padding-top: 3.2em;
+    padding-bottom: 3.2em;
+    min-height: 100vh;
+  }
+  .section-content {
+    padding: 10px 2vw;
+    width: 98vw;
+  }
+  .pageheader .icon {
+    font-size: 48px;
+  }
+  .pageheader h1 {
+    font-size: 1.5em;
+  }
+  .pageheader h4 {
+    font-size: 1em;
+    letter-spacing: 0.3em;
+  }
+  .activity-list {
+    padding: 0 2vw;
+    font-size: 1em;
+  }
+  .iframe-container {
+    max-width: 100vw;
+    padding-bottom: 56.25%;
+  }
+}
+
+@media (max-width: 400px) {
+  .pageheader .icon {
+    font-size: 32px;
+  }
+  .pageheader h1 {
+    font-size: 1.1em;
+  }
+  .pageheader h4 {
+    font-size: 0.8em;
   }
 }
