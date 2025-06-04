@@ -65,26 +65,33 @@ a:visited {
 
 .headernav {
   margin: 0;
-  padding: 0.5em 0 0 0;
+  padding: 0.2em 0 0 0;
   line-height: 1.2em;
   background-color: #fff;
-  /*border-bottom: 1px solid #CCC;*/
 }
 
 .headernav ul,
 .nav ul {
-  display: inline;
+  display: flex; /* Changed from inline to flex */
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  justify-content: center; /* Center nav items */
+  align-items: center;
   margin: 0;
   padding: 0;
+  gap: 0.1em; /* Add small gap between items */
 }
 
 .headernav .nav li {
-  display: inline;
+  display: block; /* Changed from inline to block for flex children */
 }
 
 .navlink {
-  padding: 0.5em 0.6em;
+  padding: 0.2em 0.3em;
   border: 1px solid #fff;
+  box-sizing: border-box;
+  min-width: 44px; /* Ensure tap target size */
+  text-align: center;
+  white-space: nowrap; /* Prevent text wrap inside nav items */
 }
 
 .navlink a {
@@ -260,5 +267,14 @@ a:visited {
   }
   .pageheader h4 {
     font-size: 0.8em;
+  }
+  .headernav ul,
+  .nav ul {
+    flex-direction: column;
+    gap: 0.1em;
+  }
+  .navlink {
+    width: 100%;
+    padding: 0.7em 0;
   }
 }
